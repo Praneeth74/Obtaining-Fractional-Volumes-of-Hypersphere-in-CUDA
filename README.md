@@ -7,11 +7,11 @@ make ball_samp-cuda
 
 ### Description:
 
-Consider a unit hypersphere and split it into 100 shells of equal thickness. Now, this implementation is for obtaining fractional volumes of each shell. It is primarily implemented for dimensions (2-16).
+Consider a unit hypersphere and split it into 100 shells of equal thickness. This implementation aims to obtain the fractional volumes of each shell, primarily for dimensions ranging from 2 to 16.
 
-The method considered here is to first sample sufficient number of points in the hypershpere. After sampling we can consider counting number of points in each shell as a measurement to their volume. We finally divide each count by total number of points sampled in the whole of hypershpere. 
+The method employed involves first sampling a sufficient number of points within the hypersphere. After sampling, the number of points in each shell is counted to measure their volume. Finally, each count is divided by the total number of points sampled in the entire hypersphere to obtain the fractional volumes.
 
-Here for sampling points, Rejection sampling is used where the points are uniformly sampled in an unit hypercube and then select those points that are present in the hypersphere. That is, rejecting those points which are outside hypersphere.
+For sampling points, rejection sampling is used. Points are uniformly sampled within a unit hypercube, and those points that lie outside the hypersphere are rejected. This process ensures that only points within the hypersphere are considered.
 
 
 ### Procedure:
@@ -23,13 +23,21 @@ For sampling one point - \
 2. Now, select this point only if it satisfies the following condition -\
 	$$x_{1}^{2}+x_{2}^{2}+x_{3}^{2}+....+x_{n}^{2}\ \leq\ 1$$
 
-The above inequality represents all the points present in the unit hypersphere centered at the origin. Now we can apply this procedure for obtaining as many points as need. Let's consider the total number of points we obtained to be N.
+The above inequality represents all the points present in the unit hypersphere centered at the origin. Using this procedure, we can obtain as many points as needed. Let's consider the total number of points we obtain to be N.
 
 $II$\
-Now, it is time to get the fraction of points present in each shell. Let's divide the range [0, 1] into 100 parts giving rise to 100 shells of equal thickness but increasing radius. Just to be clear, all shells will have the same center and thickness of magnitude 0.1. Now, consider one such shell of inner radius r and corresponding outer radius (r+0.1). For a given point to be in this shell, it has to satisfy the following condition in order to present in the selected shell - 
-	$$r\ <\ x_{1}^{2}+x_{2}^{2}+x_{3}^{2}+....+x_{n}^{2}\ \leq\ (r+0.1)$$
+Now, it is time to determine the fraction of points present in each shell. Let's divide the range [0, 1] into 100 parts, creating 100 shells of equal thickness but increasing radius. To be clear, all shells will have the same center and a thickness of 0.01. Consider one such shell with an inner radius of 𝑟 and a corresponding outer radius of (𝑟+0.01). For a given point to be in this shell, it must satisfy the following condition:
+
+	$$r\ <\ x_{1}^{2}+x_{2}^{2}+x_{3}^{2}+....+x_{n}^{2}\ \leq\ (r+0.01)$$
  
- In this way, count the number of points in each shell and divide those counts with total number of points N in the hypersphere. These fractions represent the fractional volumes of the shells of a hypersphere.
+In this way, count the number of points in each shell and divide these counts by the total number of points N in the hypersphere. These fractions represent the fractional volumes of the shells of the hypersphere. Follow this procedure for each shell to obtain the fractional volumes.
+
+
+
+
+
+
+
 
  
 
