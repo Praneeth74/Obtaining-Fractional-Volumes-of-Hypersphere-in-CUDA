@@ -1,3 +1,5 @@
+# Obtaining Fractional Volumes of Hypersphere in CUDA
+
 To run the cuda executable - 
 ```
 make ball_samp-cuda
