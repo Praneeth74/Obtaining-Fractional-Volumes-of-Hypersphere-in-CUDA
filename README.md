@@ -3,10 +3,6 @@ To run the cuda executable -
 make ball_samp-cuda
 ```
 
-To run the cpu executable (optional for comparing relative performance) -
-```
-make ball_samp-cpu
-```
 
 ### Description:
 
@@ -34,6 +30,11 @@ Now, it is time to determine the fraction of points present in each shell. Let's
  
 In this way, count the number of points in each shell and divide these counts by the total number of points N in the hypersphere. These fractions represent the fractional volumes of the shells of the hypersphere. Follow this procedure for each shell to obtain its volume. Note that the sum of all the fractional volumes should be 1 (since we are using a unit hypersphere). 
 
+### Optional
+To run the cpu executable (optional for comparing relative performance) -
+```
+make ball_samp-cpu
+```
 
 
 
