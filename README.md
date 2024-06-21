@@ -32,7 +32,7 @@ $II$\
 Now, it is time to determine the fraction of points present in each shell. Let's divide the range [0, 1] into 100 parts, creating 100 shells of equal thickness but increasing radius. To be clear, all shells will have the same center and a thickness of 0.01. Consider one such shell with an inner radius of 𝑟 and a corresponding outer radius of (𝑟+0.01). For a given point to be in this shell, it must satisfy the following condition:
 	$$r\ <\ x_{1}^{2}+x_{2}^{2}+x_{3}^{2}+....+x_{n}^{2}\ \leq\ (r+0.01)$$
  
-In this way, count the number of points in each shell and divide these counts by the total number of points N in the hypersphere. These fractions represent the fractional volumes of the shells of the hypersphere. Follow this procedure for each shell to obtain the fractional volumes.
+In this way, count the number of points in each shell and divide these counts by the total number of points N in the hypersphere. These fractions represent the fractional volumes of the shells of the hypersphere. Follow this procedure for each shell to obtain its volume. Note that the sum of all the fractional volumes should be 1 (since we are using a unit hypersphere). 
 
 
 
