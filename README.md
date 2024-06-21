@@ -12,7 +12,7 @@ make ball_samp-cpu
 
 Consider a unit hypersphere and split it into 100 shells of equal thickness. This implementation aims to obtain the fractional volumes of each shell, primarily for dimensions ranging from 2 to 16.
 
-The method employed involves first sampling a sufficient number of points within the hypersphere. After sampling, the number of points in each shell is counted to measure their volume. Finally, each count is divided by the total number of points sampled in the entire hypersphere to obtain the fractional volumes.
+The method employed involves first sampling a sufficient number of points within the hypersphere. After sampling, the number of points in each shell is counted as a measure to their volumes. Finally, each count is divided by the total number of points sampled in the entire hypersphere to obtain the fractional volume of each shell.
 
 For sampling points, rejection sampling is used. Points are uniformly sampled within a unit hypercube, and those points that lie outside the hypersphere are rejected. This process ensures that only points within the hypersphere are considered.
 
