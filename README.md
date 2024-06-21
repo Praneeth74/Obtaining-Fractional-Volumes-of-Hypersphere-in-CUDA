@@ -3,7 +3,7 @@ To run the gpu executable -
 make ball_samp-cuda
 ```
 
-To run cpu executable (optional for comparing relative performance) -
+To run the cpu executable (optional for comparing relative performance) -
 ```
 make ball_samp-cpu
 ```
