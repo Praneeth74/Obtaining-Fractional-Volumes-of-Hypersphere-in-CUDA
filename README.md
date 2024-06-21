@@ -1,6 +1,7 @@
 To run the cuda executable - 
 ```
 make ball_samp-cuda
+./ball_samp-cuda
 ```
 
 
@@ -34,6 +35,7 @@ In this way, count the number of points in each shell and divide these counts by
 To run the cpu executable (optional for comparing relative performance) -
 ```
 make ball_samp-cpu
+./ball_samp-cuda
 ```
 
 
