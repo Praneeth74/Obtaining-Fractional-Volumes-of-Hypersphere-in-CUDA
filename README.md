@@ -20,7 +20,7 @@ For sampling one point -
 
 1. Consider sampling the coordinates $(x_{1}, x_{2}, x_{3},...., x_{n})$ uniformly randomly in (0, 1), where $n$ denotes number of dimensions.
 
-2. Now, select this point only if it satisfies the following condition -
-	$x_{1}$
+2. Now, select this point only if it satisfies the following condition -\
+	$x_{1}^{2}+x_{1}^{2}+x_{1}^{2}+....+x_{1}^{2} \leq 1$
 
 
