@@ -1,4 +1,4 @@
-To run the gpu executable - 
+To run the cuda executable - 
 ```
 make ball_samp-cuda
 ```
