@@ -5,10 +5,16 @@
 #include <iomanip>
 
 int main(){
-	int dims = 17;
-	int n = 150000;
+	// **Note** The following variables in the editables can be changed. Select what works best with your system.
+	// Editables {	
+	int min_dim = 1; // Min dimension - start dimension
+	int n = 150000; // Number of points to sample for dim = min_dim
+	float d = 1.5; // Number of points to sample decreases by a factor of d for each increament in dim 
+	int max_dim = 16; // Max dimension - end dimension
+	// }
+	
 	int r = 1;
-for(int dim=2; dim<dims; dim++){
+for(int dim=min_dim; dim<max_dim+1; dim++){
 	int rows=n;
 	int cols = dim;
 	double mat[rows];
@@ -63,19 +69,21 @@ for(int dim=2; dim<dims; dim++){
 //		std::cout<<fracs[i]<<std::endl;
 	}
 
-	// getting sum of fracs
-	double total_sum = 0;
-	for(int i=0; i<nump-1; i++)
-		total_sum+=fracs[i];
 
-	
-	std::cout<< "For dimensions - "<<dim<<": ";
-	for(int i=0; i<nump-1; i++){
-		std::cout<<fracs[i]<< " ";
-	}
-	std::cout<<std::endl;
-	std::cout<<std::endl;
-	n /= 1.1;
+	double total_sum = 0;
+        std::cout<<"For dimension - "<<dim<<": "<<std::endl;
+        std::cout<<"Number of points sampled = "<< mat_inds<<std::endl;
+        std::cout<<"Fractional volumes = { " ;
+        for(int i=0; i<nump-1; i++){
+                total_sum += fracs[i];
+                std::cout<<fracs[i]<<", ";
+        }
+        std::cout<<" }";
+        std::cout<<std::endl;
+        std::cout<<"Total sum of fractions = "<<total_sum<<std::endl;
+        std::cout<<std::endl;
+
+	n /= d;
 }
 }
 

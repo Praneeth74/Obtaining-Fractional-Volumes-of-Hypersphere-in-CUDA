@@ -23,7 +23,7 @@ __global__ void randgen(double* arr, int rows, int cols){
 		sum = 0;
 
 		for(int r=0; r<cols; r++){
-			randnum = curand_uniform(&state);
+			randnum = 2*curand_uniform(&state)-1;
 			sum += randnum*randnum;
 
 		}
